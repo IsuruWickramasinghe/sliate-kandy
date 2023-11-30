@@ -1,0 +1,140 @@
+/* !nav states */
+.nav{
+  display: grid;
+}
+.nav-state{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--pm-clr-dark);
+  color: var(--bg-clr);
+  height: var(--nav-state-height);
+}
+.nav-state p{
+  font-size: 75%;
+  padding: 0 var(--sp-m);
+}
+.nav-state p a{
+  font-size: var();
+  color: var(--bg-clr);
+  font-weight: 700;
+}
+.search-box{
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-clr);
+  padding: var(--sp-s);
+  max-width: 350px;
+  width: 100%;
+}
+.search-box input{
+  background-color: var(--bg-clr);
+  border: none;
+  outline: none;
+  width: 100%;
+}
+.search-icon{
+  color: var(--blk-clr);
+}
+/* !nav bar */
+.nav-bar{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: var(--nav-bar-height);
+  gap: var(--sp-xxl);
+  background-color: var(--wht-clr);
+  z-index: 100;
+}
+/* nav btn */
+.menu-toggle{
+  display: none;
+}
+.logo{
+  height: 150px;
+  z-index: 1;
+  padding-left: var(--sp-xxl);
+}
+.logo img{
+  height: 100%;
+}
+.nav-links-wrapper{
+  width: 100%;
+}
+.nav-links{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+.nav-link{
+  width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: all .3s;
+}
+.nav-link:hover{
+  background-color: var(--pm-clr-dark);
+  color: var(--wht-clr);
+}
+.nav-links .active{
+  background-color: var(--pm-clr-dark);
+  color: var(--wht-clr);
+}
+
+
+
+/* ! screen break */
+@media only screen and (max-width: 600px){
+  .nav-state{
+    height: auto;
+    flex-direction: column;
+  }
+  .search-box{
+    max-width: 100%;
+    width: 100%;
+  }
+  .nav-bar{
+    height: 100%;
+    position: relative;
+    align-items: center;
+  }
+  .logo{
+    height: 48px;
+    padding-left: var(--sp-m);
+  }
+  .menu-toggle{
+    display: block;
+    font-size: 250%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: var(--sp-m);
+  }
+  .nav-links-wrapper{
+    position: absolute;
+    top: 100%;
+    height: calc(100dvh - (var(--nav-state-height) + 48px));
+    background-color: var(--pm-clr-dark);
+    right: -100%;
+    transition: all .3s;
+  }
+  .nav-links{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .nav-link{
+    color: var(--wht-clr);
+    width: 100%;
+    height: 50px;
+  }
+  .show-nav-bar{
+    right: 0;
+  }
+  .nav-links .active{
+    background-color: var(--pm-clr);
+  }
+}
