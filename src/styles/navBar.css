@@ -9,10 +9,10 @@
   background-color: var(--pm-clr-dark);
   color: var(--bg-clr);
   height: var(--nav-state-height);
+  padding: 0 var(--sp-l);
 }
 .nav-state p{
   font-size: 75%;
-  padding: 0 var(--sp-m);
 }
 .nav-state p a{
   font-size: var();
@@ -92,6 +92,7 @@
   .nav-state{
     height: auto;
     flex-direction: column;
+    padding: var(--sp-s);
   }
   .search-box{
     max-width: 100%;
