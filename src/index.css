@@ -49,6 +49,10 @@
   --bx-sdw-8: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 
 }
+#root{
+  overflow: hidden;
+  min-height: 100dvh;
+}
 
 *{
   box-sizing: border-box;
@@ -62,8 +66,4 @@ a{
 }
 a:hover{
   text-decoration: underline;
-}
-.page{
-  overflow: hidden;
-  min-height: 100dvh;
 }
