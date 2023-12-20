@@ -1,11 +1,11 @@
 /* ? google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lunasima&family=Open+Sans:wght@400;500&display=swap');
 
 :root {
 
   /* font */
-  --body-font: 'Roboto', sans-serif;
-  --title-font: 'Lora', serif;
+  --body-font: 'Open Sans', sans-serif;
+  --title-font:  'Lunasima', sans-serif;
 
   /* font size */
   --biggest-fs: 3rem;
@@ -61,7 +61,7 @@
   --bdr-re-s: 6px;
 
   /* navbar */
-  --nav-height: 45px;
+  --nav-height: 35px;
 
   /* box shadow */
   --bx-sdw-0: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -129,12 +129,11 @@ img{
 }
 .container{
   max-width: 1366px;
-  margin: var(--sp-l) 0;
+  margin-top: 65px;
   padding: var(--sp-s);
 }
 .section-title{
-  margin: 30px 0 var(--sp-l) 0;
-  padding: var(--sp-s);
+  padding: var(--sp-l) 0;
 }
 
 

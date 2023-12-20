@@ -13,6 +13,7 @@
   height: var(--nav-height);
   padding: 0 var(--sp-m);
   color: var(--body-clr);
+  font-size: var(--small-fs);
 }
 .nav-state a{
   color: var(--body-clr);

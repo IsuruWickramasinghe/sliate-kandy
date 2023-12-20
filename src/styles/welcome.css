@@ -1,13 +1,49 @@
 .welcome{
-  background-color: var(--yellow-clr-light);
+  background-color: var(--body-light);
+}
+.welcome-title{
+  text-align: center;
+  text-decoration: none;
+  font-weight: var(--font-semi-bold);
 }
 .welcome-desc{
+  text-align: center;
+  width: 100%;
   padding: var(--sp-m);
   display: grid;
   gap:var(--sp-m);
-  font-size: var(--smaller-fs);
+  max-width: 800px;
+}
+.welcome-cards{
+  display: flex;
+  gap: var(--sp-l);
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .vision,
 .mission{
-  color: var(--red-clr-dark);
+  width: 350px;
+  flex: 1;
+}
+.vision-title,
+.mission-title{
+  font-size: var(--h2-fs);
+  font-weight: var(--font-semi-bold);
+}
+.welcome-note{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--sp-m);
+  font-size: var(--normal-fs);
+}
+.vision p,
+.mission p{
+  font-size: var(--normal-fs);
+}
+.vision img,
+.mission img,
+.welcome-note img{
+  width: 75px;
+  height: 75px;
 }
