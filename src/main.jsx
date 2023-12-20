@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './index.css'
+import './styles/index.css'
 import { HashRouter } from 'react-router-dom'
 import { StateContext } from './context/StateContext.jsx'
 import "react-responsive-carousel/lib/styles/carousel.min.css";

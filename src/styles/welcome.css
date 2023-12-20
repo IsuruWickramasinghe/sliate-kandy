@@ -1,0 +1,13 @@
+.welcome{
+  background-color: var(--yellow-clr-light);
+}
+.welcome-desc{
+  padding: var(--sp-m);
+  display: grid;
+  gap:var(--sp-m);
+  font-size: var(--smaller-fs);
+}
+.vision,
+.mission{
+  color: var(--red-clr-dark);
+}

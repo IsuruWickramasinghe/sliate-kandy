@@ -1,0 +1,22 @@
+.gal-page{
+  display: flex;
+  justify-content: center;
+}
+.gal{
+  background-color: var(--body-clr);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-m);
+  font-size: var(--small-fs);
+}
+.gal-imgs{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-s);
+}
+.gal-img{
+  width: 250px;
+  border-radius: var(--bdr-re-m);
+  flex: 1;
+  cursor: pointer;
+}

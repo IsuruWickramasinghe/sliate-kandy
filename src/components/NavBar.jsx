@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/navBar.css';
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 import { FaSearch } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
@@ -34,9 +34,9 @@ function NavBar() {
         </div>
       </div>
       <div className="nav-bar">
-        <div className="logo">
+        <Link to={'/'} className="logo">
           <img src="/logo.png" alt="logo" className='desk-logo'/>
-        </div>
+        </Link>
         <div className="menu-toggle" onClick={menuHandler}>
           {(menuToggle)? <IoMdClose className='menu-btn'/> : <IoMdMenu className='menu-btn'/>}
         </div>

@@ -1,141 +1,140 @@
-/* !nav states */
 .nav{
-  display: grid;
+  background-color: var(--body-clr);
+  width: 100%;
 }
+
+/* state */
 .nav-state{
+  background-color: var(--red-clr-dark);
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background-color: var(--pm-clr-dark);
-  color: var(--bg-clr);
-  height: var(--nav-state-height);
-  padding: 0 var(--sp-l);
+  align-items: center;
+  width: 100%;
+  height: var(--nav-height);
+  padding: 0 var(--sp-m);
+  color: var(--body-clr);
 }
-.nav-state p{
-  font-size: 75%;
-}
-.nav-state p a{
-  font-size: var();
-  color: var(--bg-clr);
-  font-weight: 700;
+.nav-state a{
+  color: var(--body-clr);
 }
 .search-box{
-  border-bottom: 1px solid black;
   display: flex;
+  background-color: var(--body-clr);
+  justify-content: flex-start;
   align-items: center;
-  background-color: var(--bg-clr);
-  padding: var(--sp-s);
+  padding: 0 var(--sp-s) 0 0;
   max-width: 350px;
   width: 100%;
 }
 .search-box input{
-  background-color: var(--bg-clr);
   border: none;
-  outline: none;
+  padding: var(--sp-s);
   width: 100%;
 }
 .search-icon{
-  color: var(--blk-clr);
+  color: var(--title-clr);
+  cursor: pointer;
 }
-/* !nav bar */
+
+/* nav bar */
 .nav-bar{
+  position: relative;
+  background-color: var(--body-clr);
   display: flex;
-  width: 100%;
   justify-content: space-between;
-  height: var(--nav-bar-height);
-  gap: var(--sp-xxl);
-  background-color: var(--wht-clr);
-  z-index: 100;
-}
-/* nav btn */
-.menu-toggle{
-  display: none;
+  align-items: flex-start;
+  width: 100%;
+  height: var(--nav-height);
+  padding: 0 var(--sp-m) 0 0;
 }
 .logo{
   height: 100px;
-  z-index: 1;
-  padding-left: var(--sp-xxl);
+  width: auto;
+  margin-left: var(--sp-s);
+  z-index: var(--z-tooltip);
 }
 .logo img{
   height: 100%;
+  width: auto;
 }
-.nav-links-wrapper{
-  width: 100%;
+.menu-toggle{
+  display: none;
 }
 .nav-links{
   display: flex;
-  justify-content: center;
-  height: 100%;
+  justify-content: flex-start;
   align-items: center;
-}
-.nav-link{
-  width: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  transition: all .3s;
-}
-.nav-link:hover{
-  background-color: var(--pm-clr-dark);
-  color: var(--wht-clr);
+  height: var(--nav-height);
+  background-color: var(--body-clr);
 }
 .nav-links .active{
-  background-color: var(--pm-clr-dark);
-  color: var(--wht-clr);
+  background-color: var(--red-clr-dark);
+  color: var(--body-clr);
+}
+.nav-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--nav-height);
+  width: 100px;
+  color: var(--title-clr);
+  transition: var(--delay);
+}
+.nav-link:hover{
+  background-color: var(--red-clr-dark);
+  color: var(--body-clr);
 }
 
+/* mobile */
+@media only screen and (max-width: 600px) {
 
-
-/* ! screen break */
-@media only screen and (max-width: 600px){
+  .nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+  }
+  
   .nav-state{
-    height: auto;
     flex-direction: column;
-    padding: var(--sp-s);
+    justify-content: center;
   }
-  .search-box{
-    max-width: 100%;
-    width: 100%;
-  }
+
   .nav-bar{
-    height: 100%;
-    position: relative;
     align-items: center;
+    justify-content: space-between;
   }
   .logo{
-    height: 48px;
-    padding-left: var(--sp-m);
+    height: var(--nav-height);
   }
   .menu-toggle{
-    display: block;
-    font-size: 250%;
-    height: 100%;
     display: flex;
-    align-items: center;
-    padding: var(--sp-m);
+    outline: auto;
+    font-size: var(--biggest-fs);
   }
   .nav-links-wrapper{
+    background-color: var(--body-clr);
     position: absolute;
     top: 100%;
-    height: calc(100dvh - (var(--nav-state-height) + 48px));
-    background-color: var(--pm-clr-dark);
     right: -100%;
-    transition: all .3s;
+    z-index: var(--z-tooltip);
+    width: 100dvw;
+    height: calc(100dvh - (var(--nav-height)*2));
+    transition: var(--delay);
   }
   .nav-links{
     flex-direction: column;
-    justify-content: flex-start;
+    background-color: var(--red-clr-dark);
+    height: 100%;
+  }
+  .nav-links .active{
+    background-color: var(--red-clr);
   }
   .nav-link{
-    color: var(--wht-clr);
+    color: var(--body-clr);
     width: 100%;
-    height: 50px;
   }
   .show-nav-bar{
     right: 0;
-  }
-  .nav-links .active{
-    background-color: var(--pm-clr);
   }
 }
